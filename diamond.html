@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Diamond Information</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+            color: #333;
+        }
+        header {
+            background-color:aqua; 
+            padding: 20px;
+            text-align: center;
+        }
+        nav {
+            margin: 20px 0;
+        }
+        nav a {
+            margin: 0 15px;
+            text-decoration: none;
+            color: #333;
+            font-weight: bold;
+        }
+        section {
+            padding: 20px;
+            margin: 20px;
+            background-color: #fff;
+            border-radius: 8px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        }
+        .image-gallery {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-around;
+        }
+        .image-gallery img {
+            max-width: 100%;
+            height: auto;
+            margin: 10px;
+            border-radius: 8px;
+            flex: 1 1 calc(30% - 20px);
+        }
+        footer {
+            text-align: center;
+            padding: 10px;
+            background-color: wheat;
+            position: relative;
+            bottom: 0;
+            width: 100%;
+        }
+        @media (max-width: 768px) {
+            .image-gallery img {
+                flex: 1 1 calc(45% - 20px);
+            }
+        }
+        @media (max-width: 480px) {
+            .image-gallery img {
+                flex: 1 1 100%; 
+            }
+        }
+    </style>
+</head>
+<body>
+
+<header>
+    <h1>Welcome to Diamond Section</h1>
+    <nav>
+        <a href="#about">About Diamond</a>
+        <a href="#gallery">Diamond Gallery</a>
+    </nav>
+</header>
+
+<section id="about">
+    <h2>About Diamond</h2>
+    <p>Diamonds are a form of carbon and the hardest natural substance known, prized for their brilliance and durability. They are formed deep within the Earth over millions of years and come in various colors, with their unique properties making them highly sought after in jewelry and industrial applications. Formation and Age</p>
+</section>
+
+<section id="gallery">
+    <h2>Gold Gallery</h2>
+    <div class="image-gallery">
+        <img src="../images/dia1.jpeg" alt=diamond Image 1">
+        <img src="../images/dia2.webp" alt="diamond Image 2">
+        <img src="../images/dia3.jpeg" alt="diamond Image 3">
+        <img src="../images/dia4.webp" alt="diamond Image 4">
+    </div>
+</section>
+
+<footer>
+    <p>&copy; 2023 Gold Information Hub. All rights reserved.</p>
+</footer>
+
+</body>
+</html>

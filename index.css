@@ -1,0 +1,904 @@
+
+       /* General Styles */
+     /* General Styling */
+     body {
+        font-family: 'Poppins', sans-serif;
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        line-height: 1.6;
+        color: #333;
+        background-color: #f4f6f9;;
+    }
+    
+    h1,
+    h2,
+    h3 {
+        font-weight: 600;
+        letter-spacing: 2px;
+        
+    }
+    
+        /* Slider Area */
+        .slider-area {
+            max-width: 100%;
+            overflow: hidden;
+            position: relative;
+            height: 600px; /* Set height for desktop */
+        }
+    
+        .slides {
+            display: flex;
+            transition: transform 1.5s ease-in-out;
+            width: 300%; /* Ensure all slides are side by side */
+        }
+    
+        .slides img {
+            width: 100%;
+            height: 600px; /* Set height for desktop */
+            object-fit: cover; /* Ensure image covers entire area without distortion */
+            opacity: 1;
+        }
+    
+        /* Responsive Styles */
+        @media (max-width: 1200px) {
+            .slider-area {
+                height: 440px; /* Keep the height consistent */
+            }
+    
+            .slides img {
+                height: 500px;
+            }
+        }
+    
+        @media (max-width: 768px) {
+            .slider-area {
+                height: 400px;
+            }
+    
+            .slides img {
+                height: 400px;
+            }
+        }
+    
+        @media (max-width: 480px) {
+            .slider-area {
+                height: 300px;
+            }
+    
+            .slides img {
+                height: 300px;
+                width: calc(100% / 3); /* Ensure three images fit in one view */
+            }
+    
+            .slides {
+                width: 300%;
+            }
+        }
+    
+    /* Lavender Section */
+    .lavender-section {
+        background-color: #f4f6f9;
+        padding: 50px 20px;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        }
+        
+        .lavender-section img {
+        width: 100%;
+        max-width: 400px;
+        margin: 0px;
+        border-radius: 10px;
+        object-fit: cover;
+        }
+        
+        .lavender-content {
+        max-width: 600px;
+        margin: 20px;
+        }
+        
+        .lavender-content h3 {
+        font-size: 2.5em;
+        color: #080808;
+        margin-bottom: 20px;
+        font-family: 'Times New Roman', Times, serif;
+        letter-spacing: 2px;
+        }
+        
+        .lavender-content p {
+        font-size: 1.2em;
+        line-height: 1.6;
+        color: #333;
+        }
+        
+        @keyframes slideIn {
+            from {
+                transform: translateY(20px);
+                opacity: 0;
+            }
+        
+            to {
+                transform: translateY(0);
+                opacity: 1;
+            }
+        }
+        
+        .about-content {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: 20px; /* Add gap between elements */
+        }
+        
+        .about-content p {
+            flex: 1 1 45%; /* Allow paragraph to take available space */
+            margin: 0; /* Remove default margin */
+        }
+    
+    
+    /* Investment Section */
+    .investment-section {
+        background-color: #f4f6f9;
+        padding: 50px 20px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        text-align: left;
+        max-width: 1200px;
+        margin: 0 auto;
+        gap: 40px;
+    }
+    
+    .investment-image {
+        width: 100%;
+        max-width: 400px;
+        margin: 0px;
+        border-radius: 50px;
+        object-fit: cover;
+        
+    }
+    
+    .investment-image img {
+        width: 100%;
+        transition: transform 0.3s ease; /* Smooth transition on zoom */
+        object-fit: cover;
+    }
+    
+    .investment-content {
+        max-width: 600px;
+    }
+    
+    .investment-content h3 {
+        font-size: 2.5em;
+        color: #080808;
+        margin-bottom: 20px;
+        font-family: 'Times New Roman', Times, serif;
+        letter-spacing: 2px;
+    }
+    
+    .investment-content p {
+        font-size: 1.2em;
+        line-height: 1.6;
+        color: #333;
+        margin-bottom: 20px;
+    }
+    
+    /* Responsive Styles */
+    @media (max-width: 768px) {
+        .investment-section {
+            flex-direction: column;
+            text-align: center;
+        }
+    
+        .investment-image {
+            max-width: 100%;
+        }
+    
+        .investment-content {
+            max-width: 100%;
+            margin-top: 20px;
+        }
+    }
+    
+    
+    /* How It Works Section */
+    .how-it-works-section {
+        background-color: #f4f6f9;
+        color: #c3a65e;
+        padding: 60px 20px;
+        text-align: center; /* Center the entire section */
+    }
+    
+    .how-it-works-section h2 {
+        color: #000000; /* Make heading black */
+        margin-bottom: 50px;
+        font-family: 'Times New Roman', serif; /* Use Times New Roman font */
+        font-size: 42px; /* Heading font size */
+        letter-spacing: 2px;
+    }
+    
+    .steps {
+        display: flex;
+        justify-content: center; /* Center items horizontally */
+        flex-wrap: wrap; /* Allow wrapping on smaller screens */
+        gap: 20px; /* Add gap between steps */
+        text-align: center; /* Center content inside each step */
+    }
+    
+    .step {
+        flex: 1 200px; /* Flexible width with a min size */
+        background-color: #fff; /* White background for each step */
+        padding: 20px; /* Padding for better spacing */
+        border-radius: 10px; /* Rounded corners */
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+        text-align: center; /* Center content */
+        transition: transform 0.3s; /* Smooth hover effect */
+    }
+    
+    .step:hover {
+        transform: translateY(-10px); /* Move the step up on hover */
+    }
+    
+    .step h3 {
+        margin-top: 15px;
+        color: #000000; /* Black for subheadings */
+    }
+    
+    .step p {
+        color: #666; /* Dark gray for paragraphs */
+        margin: 10px 0; /* Spacing for paragraphs */
+    }
+    
+    .step img {
+        width: 120px; /* Image size */
+        height: 120px;
+        margin-bottom: 20px;
+        border-radius: 50%; /* Circular images */
+        transition: transform 0.3s;
+    }
+    
+    .step img:hover {
+        transform: scale(1.1); /* Slightly enlarge image on hover */
+    }
+    
+    /* Mobile Adjustments */
+    @media (max-width: 768px) {
+        .steps {
+            flex-direction: column; /* Stack the steps vertically on mobile */
+            align-items: center; /* Center the steps */
+        }
+    
+        .step {
+            width: 80%; /* Make steps wider on mobile */
+            margin-bottom: 30px; /* Add space between steps */
+        }
+    }
+    
+    
+             /* Steps Section */
+             .steps-section {
+                text-align: center;
+                padding: 50px 0;
+                background-color: white;
+            }
+    
+            .steps-section h2 {
+                font-size: 42px;
+                margin-bottom: 30px;
+                color: #333;
+                font-family: 'Times New Roman', Times, serif;
+            }
+    
+            .steps-container1 {
+                display: flex;
+                justify-content: center;
+                gap: 20px;
+                flex-wrap: wrap;
+            }
+    
+            .step-box {
+                background-color: #fff;
+                border: 2px solid #e0e0e0;
+                border-radius: 10px;
+                padding: 20px;
+                width: 250px;
+                box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+                text-align: center;
+            }
+    
+            .step-number {
+                font-size: 18px;
+                font-weight: bold;
+                color: #7f3b00;
+                margin-bottom: 10px;
+            }
+    
+            .step-number span {
+                font-size: 42px;
+                display: block;
+            }
+    
+            .step-box h3 {
+                font-size: 18px;
+                margin-bottom: 10px;
+                color: #333;
+            }
+    
+            .step-box p {
+                font-size: 14px;
+                color: #666;
+                margin-bottom: 20px;
+            }
+    
+            .step-box img {
+                width: 80px;
+                height: auto;
+            }
+    
+            @media (max-width: 768px) {
+                .steps-container {
+                    flex-direction: column;
+                    align-items: center;
+                }
+    
+                .step-box {
+                    width: 80%;
+                }
+            }
+    
+    
+    
+    /* Buy/Sell Gold Section */
+    .buy-sell-gold-section {
+        background: linear-gradient(135deg, #f4f6f9 ); /* Missing color value */
+        padding: '40px 20px';
+        border-radius: 20px;
+        margin: 60px 0;
+        text-align: center;
+    }
+    
+    .buy-sell-gold-section h2 {
+        font-size: 42px;
+        color: #000000;
+        margin-bottom: 30px;
+        text-transform: uppercase;
+        letter-spacing: 2px;
+        font-family: 'Times New Roman', Times, serif;
+    }
+    
+    .gold-wrapper {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 30px;
+    }
+    
+    .gold-image img {
+        max-width: 95%;
+        height: 450px;
+        border-radius: 15px;
+        
+        object-fit: cover;
+    }
+    
+    .gold-content {
+        width: 78%;
+        padding: 30px;
+        text-align: left;
+        background: #fff;
+        border-radius: 15px;
+        box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1);
+        flex-grow: 1;
+    }
+    
+    /* Gold Buttons */
+    .gold-options {
+        display: flex;
+        justify-content: center;
+        margin-bottom: 30px;
+        gap: 30px;
+    }
+    
+    .gold-button {
+        padding: 14px 40px;
+        background-color: #b58a38;
+        color: white;
+        border: none;
+        cursor: pointer;
+        font-size: 20px;
+        font-weight: bold;
+        border-radius: 50px;
+        transition: all 0.3s ease;
+        box-shadow: 0 8px 20px rgba(181, 138, 56, 0.4);
+    }
+    
+    .gold-button:hover {
+        background-color: #9a6e2c;
+        transform: translateY(-5px);
+        box-shadow: 0 10px 30px rgba(181, 138, 56, 0.5);
+    }
+    
+    /* Gold Forms */
+    .gold-form {
+        display: none;
+        margin-top: 30px;
+        padding: 20px;
+        animation: slideIn 0.5s ease-in-out;
+    }
+    
+    .gold-form h3 {
+        font-size: 26px;
+        margin-bottom: 15px;
+        color: #444;
+        border-bottom: 3px solid #b58a38;
+        padding-bottom: 10px;
+    }
+    
+    .gold-rate {
+        font-size: 20px;
+        color: #b58a38;
+        font-weight: bold;
+        margin-bottom: 25px;
+    }
+    
+    .input-label {
+        display: block;
+        font-size: 18px;
+        color: #333;
+        margin-bottom: 12px;
+    }
+    
+    .input-box {
+        width: 100%;
+        padding: 14px;
+        margin: 10px 0;
+        border: 2px solid #ccc;
+        border-radius: 8px;
+        font-size: 18px;
+        transition: border-color 0.3s ease;
+        background-color: #f9f9f9;
+        box-shadow: inset 0 2px 5px rgba(0, 0, 0, 0.05);
+    }
+    
+    .input-box:focus {
+        border-color: #b58a38;
+        outline: none;
+    }
+    
+    .result-box {
+        font-size: 22px;
+        color: #444;
+        background-color: #f7f7f7;
+        padding: 20px;
+        border-radius: 10px;
+        margin-top: 20px;
+        box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    }
+    
+    .gold-form.show {
+        display: block;
+        animation: slideIn 0.5s ease-in-out;
+    }
+    
+    @keyframes slideIn {
+        0% {
+            opacity: 0;
+            transform: translateY(20px);
+        }
+    
+        100% {
+            opacity: 1;
+            transform: translateY(0);
+        }
+    }
+    
+    @media (min-width: 768px) {
+        .gold-wrapper {
+            flex-direction: row;
+            gap: 50px;
+        }
+    
+        .gold-image {
+            flex: 1;
+        }
+    
+        .gold-content {
+            flex: 1;
+        }
+    }
+    
+    /* Call to Action Section */
+    .cta-section {
+        background-image: url('./img/209571.jpg');
+        background-size: cover;
+        background-position: center;
+        padding: 60px 20px;
+        text-align: center;
+        border-radius: 15px;
+        margin: 40px 0;
+        box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+        color: white;
+    }
+    
+    .cta-section h2 {
+        font-size: 36px;
+        margin-bottom: 20px;
+        font-family: 'Times New Roman', Times, serif;
+        letter-spacing: 1.5px;
+        text-transform: uppercase;
+        text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
+    }
+    
+    /* CTA Button Styling */
+    .cta-button {
+        display: inline-block;
+        background-color: #ffffff;
+        color: #000000;
+        padding: 14px 28px;
+        font-family: 'Times New Roman', Times, serif;
+        font-weight: bold;
+        text-transform: uppercase;
+        border-radius: 30px;
+        border: none;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        transition: all 0.4s ease;
+        margin-top: 20px;
+        position: relative;
+        overflow: hidden;
+    }
+    
+    .cta-button:hover {
+        background-color: #d4af37;
+        color: #ffffff;
+        transform: translateY(-3px);
+        box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+    }
+    
+    .cta-button::before,
+    .cta-button::after {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        border-radius: 30px;
+        transition: all 0.4s ease;
+        z-index: -1;
+    }
+    
+    .cta-button::before {
+        background-color: rgba(212, 175, 55, 0.5);
+        transform: scale(0);
+    }
+    
+    .cta-button:hover::before {
+        transform: scale(1);
+    }
+    
+    .cta-button::after {
+        background-color: rgba(255, 255, 255, 0.2);
+        transform: scale(0);
+    }
+    
+    .cta-button:hover::after {
+        transform: scale(1);
+    }
+    
+    
+    
+    
+    /* Benefits Section */
+    .benefits-section {
+        padding: 80px 23px;
+        background-color:#f4f6f9; ; /* Soft, elegant background */
+        text-align: center;
+    }
+    
+    .benefits-section h2 {
+        font-size: 2.8em;
+        color: #2c2c2c;
+        font-family: 'Times New Roman', Times, serif; /* Classic font for elegance */
+        margin-bottom: 50px;
+    }
+    
+    /* Cards Container */
+    .benefits-card-container {
+        display: flex; /* Keep row layout for desktop */
+        justify-content: center; /* Center align cards */
+        gap: 30px; /* Space between cards */
+    }
+    
+    /* Individual Benefit Card */
+    .benefit-card {
+        position: relative;
+        overflow: hidden; /* Hide overflow for smoother hover effects */
+        border-radius: 20px;
+        box-shadow: 0 6px 20px rgba(0, 0, 0, 0.1);
+        width: 300px; /* Fixed width for each card */
+        transition: transform 0.4s ease, box-shadow 0.4s ease;
+    }
+    
+    /* Image Styling */
+    .benefit-card img {
+        width: 100%; /* Make image responsive */
+        height: 500px; /* Set fixed height for images */
+        object-fit: cover; /* Ensure the image covers the card */
+        transition: transform 0.3s ease;
+    }
+    
+    /* On hover, slightly zoom the image */
+    .benefit-card:hover img {
+        transform: scale(1.1);
+    }
+    
+    /* Text Styling */
+    .benefit-card h3 {
+        position: absolute;
+        left: 50%;
+        transform: translateX(-50%);
+        top: 79%;
+        font-size: 1.5em;
+        text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.6);
+        background-color: rgba(0, 0, 0, 0.7);
+        padding: 10px 20px;
+        border-radius: 5px;
+        color: white;
+        display: inline-block;
+        width: 100%;
+        font-family: 'Times New Roman', Times, serif;
+    }
+    
+    /* Paragraph Styling */
+    .benefit-card p {
+        position: absolute;
+        left: 34%;
+        transform: translateX(-50%);
+        top: 47.2%;
+        font-size: 1.5em;
+        font-family: 'Times New Roman', Times, serif;
+        text-align: center;
+        line-height: 1.4;
+        opacity: 0;
+        transition: opacity 0.3s ease;
+        color: #000000;
+    }
+    
+    /* Show text on hover */
+    .benefit-card:hover p {
+        opacity: 1;
+    }
+    
+    /* Responsive Adjustments */
+    @media (max-width: 768px) {
+        /* Mobile Optimization */
+    
+        .benefit-card {
+            width: 100%; /* Full width on small screens */
+            max-width: 400px; /* Set max width */
+        }
+    
+        .benefits-card-container {
+            flex-direction: column; /* Stack cards vertically on small screens */
+            align-items: center;
+        }
+    
+        
+    
+        .benefits-section h2 {
+            font-size: 2.2em; /* Adjust heading size for smaller screens */
+        }
+    
+        .benefit-card h3 {
+            font-size: 1.3em; /* Slightly reduce heading size for better readability */
+            top: 87%; /* Adjust heading position slightly higher on mobile */
+            padding: 8px 16px;
+        }
+    
+        .benefit-card p {
+            font-size: 1.2em; /* Adjust paragraph font size for readability */
+            top: 70%; /* Adjust positioning for better alignment on mobile */
+            left: 35%; /* Center align the paragraph text */
+        }
+    
+        .benefit-card img {
+            height: 500px; /* Let the image height adjust dynamically */
+        }
+    }
+    
+    /* Maintain the desktop view without any changes */
+    @media (min-width: 769px) {
+        /* Keep the desktop styling intact */
+    }
+    
+    
+    /* FAQ Section Styling */
+    .faq-section {
+        padding: 60px 20px;
+        background-color: #f4f5f7; /* Soft background */
+      }
+      
+      .faq-container {
+        padding: 23px;
+        background-color: #f4f6f9;
+        text-align: center;
+      }
+      
+      .faq-container h2 {
+        font-size: 2.5em;
+        margin-bottom: 30px;
+        color: #2c2c2c;
+        animation: fadeInUp 0.5s ease-in-out;
+        font-family: 'Times New Roman', Times, serif;
+      }
+      
+      /* Animation for the header */
+      @keyframes fadeInUp {
+        from {
+          transform: translateY(-20px);
+          opacity: 0;
+        }
+        to {
+          transform: translateY(0);
+          opacity: 1;
+        }
+      }
+      
+      /* FAQ Item */
+      .faq-item {
+        background-color: #fff;
+        border-radius: 10px;
+        margin-bottom: 20px;
+        box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+        overflow: hidden;
+        transition: all 0.3s ease;
+      }
+      
+      .faq-item:hover {
+        transform: scale(1.02);
+        box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+      }
+      
+      /* FAQ Question */
+      .faq-question {
+        cursor: pointer;
+        padding: 20px;
+        font-size: 1.3em;
+        font-weight: bold;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        background-color: #ffffff;
+        color: #000000;
+        border-bottom: 1px solid #ddd;
+        transition: background-color 0.3s;
+        font-family: 'Times New Roman', Times, serif;
+      }
+      
+      .faq-question:hover {
+        background-color: #b4bec4; /* Hover effect */
+      }
+      
+      /* FAQ Answer */
+      .faq-answer {
+        display: none;
+        padding: 20px;
+        font-size: 1.2em;
+        color: #000000;
+        background-color:  #ffffff;;
+      }
+      
+      .black-text {
+        color: black;
+    }
+    
+    
+      /* Expand Icon */
+      .expand-icon {
+        font-size: 1.5em;
+      }
+      
+      /* Mobile Adjustments */
+      @media (max-width: 768px) {
+        
+      
+        .faq-container h2 {
+          font-size: 2em;
+        }
+      
+        .faq-question {
+          font-size: 1.1em;
+        }
+      
+        .faq-answer {
+          font-size: 1em;
+        }
+      }
+      
+      /* Expand/Collapse FAQ logic */
+      .faq-question.active + .faq-answer {
+        display: block;
+      }
+
+      * {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+}
+
+:root {
+  --gradient: linear-gradient(45deg, #ff3366, #ff6b6b, #4834d4, #686de0);
+  --glass-bg: rgba(255, 255, 255, 0.05);
+  --border: 1px solid rgba(255, 255, 255, 0.1);
+  --shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+}
+
+body {
+  background: #0a0a0a;
+  min-height: 100vh;
+}
+
+.navbar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  padding: 1.2rem 5%;
+  backdrop-filter: blur(12px);
+  background: var(--glass-bg);
+  border-bottom: var(--border);
+  z-index: 1000;
+}
+
+.navbar.scrolled {
+  padding: 0.8rem 5%;
+  background: rgba(10, 10, 10, 0.95);
+}
+
+.navbar-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  max-width: 1400px;
+  min-width: 700px;
+
+  margin: 0 auto;
+}
+
+.logo {
+  font-size: 1.8rem;
+  font-weight: 700;
+  background: var(--gradient);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  animation: gradient 8s linear infinite;
+  background-size: 300%;
+  letter-spacing: -0.5px;
+}
+
+.nav-links {
+  display: flex;
+  gap: 2.5rem;
+  list-style: none;
+}
+
+.nav-links a {
+  color: white;
+  text-decoration: none;
+  font-weight: 500;
+  position: relative;
+  padding: 0.5rem 0;
+  transition: all 0.3s ease;
+  font-size: 1.05rem;
+  letter-spacing: 0.3px;
+}
+      
+.navbar-brand{
+    color: goldenrod;
+}

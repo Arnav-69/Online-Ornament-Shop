@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Silver Information</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+            color: #333;
+        }
+        header {
+            background-color: #b4b9b8;
+            padding: 20px;
+            text-align: center;
+        }
+        nav {
+            margin: 20px 0;
+        }
+        nav a {
+            margin: 0 15px;
+            text-decoration: none;
+            color: #333;
+            font-weight: bold;
+        }
+        section {
+            padding: 20px;
+            margin: 20px;
+            background-color: #fff;
+            border-radius: 8px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        }
+        .image-gallery {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-around;
+        }
+        .image-gallery img {
+            max-width: 100%;
+            height: auto;
+            margin: 10px;
+            border-radius: 8px;
+            flex: 1 1 calc(30% - 20px); 
+        }
+        footer {
+            text-align: center;
+            padding: 10px;
+            background-color: #d8d8d4;
+            position: relative;
+            bottom: 0;
+            width: 100%;
+        }
+        @media (max-width: 768px) {
+            .image-gallery img {
+                flex: 1 1 calc(45% - 20px); 
+            }
+        }
+        @media (max-width: 480px) {
+            .image-gallery img {
+                flex: 1 1 100%; 
+            }
+        }
+    </style>
+</head>
+<body>
+
+<header>
+    <h1>Welcome to Silver Section</h1>
+    <nav>
+        <a href="#about">About Silver</a>
+        <a href="#gallery">Silver Gallery</a>
+    </nav>
+</header>
+
+<section id="about">
+    <h2>About Silver</h2>
+    <p>Silver is a precious metal known for its lustrous appearance, high conductivity, and versatility. It has been used for various purposes throughout history, from currency to jewelry to industrial applications. Here’s a comprehensive overview of silver</p>
+</section>
+
+<section id="gallery">
+    <h2>Gold Gallery</h2>
+    <div class="image-gallery">
+        <img src="../images/silver1.jpg" alt="Gold Image 1">
+        <img src="../images/silver2.avif" alt="Gold Image 2">
+        <img src="../images/silver3.jpg" alt="Gold Image 3">
+        <img src="../images/silver4.avif" alt="Gold Image 4">
+    </div>
+</section>
+
+<footer>
+    <p>&copy; 2023 Gold Information Hub. All rights reserved.</p>
+</footer>
+
+</body>
+</html>
